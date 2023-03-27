@@ -6,22 +6,22 @@ import Skills from "@/sctions/skills/Skills";
 
 export default function Home() {
     return (
-        <div className="w-screen h-screen bg-inherit overflow-x-hidden snap-mandatory snap-y">
-            <section className="snap-center">
+        <>
+            <section id="hero" className="snap-center">
                 <Hero />
             </section>
-            <section className="snap-center">
+            <section id="about" className="snap-center">
                 <About />
             </section>
-            <section className="snap-center">
+            <section id="projects" className="snap-center">
                 <Projects />
             </section>
-            <section className="snap-center">
+            <section id="skills" className="snap-center">
                 <Skills />
             </section>
-            <section className="snap-center">
+            <section id="contact" className="snap-center">
                 <Contact />
             </section>
-        </div>
+        </>
     );
 }

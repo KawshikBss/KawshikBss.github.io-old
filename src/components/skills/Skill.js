@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-function Skill({ type }) {
+function Skill({ index, type }) {
     return (
-        <div className="w-[178px] border-white border-[1px] flex flex-col justify-between items-start">
+        <motion.div
+            initial={{ x: 200 }}
+            transition={{ duration: 0.5 * (index + 1) }}
+            whileInView={{ x: 0 }}
+            className="w-[178px] border-white border-[1px] flex flex-col justify-between items-start"
+        >
             <span className="w-full p-[8px] border-b-[1px] border-white font-600 text-[16px] text-white">
                 {type ? type : "Skill"}
             </span>
@@ -12,7 +18,7 @@ function Skill({ type }) {
                 <span>React</span>
                 <span>React</span>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

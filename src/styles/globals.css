@@ -9,3 +9,24 @@ body {
     font-family: "Fira Code", monospace;
     overflow-x: hidden;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    padding-right: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c778dda6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #c778dd;
+}
