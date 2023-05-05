@@ -1,5 +1,6 @@
 .navbar-container {
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 32px 0 8px;
@@ -17,7 +18,6 @@
 }
 
 .navbar-items {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
@@ -38,4 +38,15 @@
 
 .navbar-item-sym {
     color: #c778dd;
+}
+
+.navbar-hamburger-btn {
+    font-size: 24px;
+    color: #abb2bf;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+}
+
+.navbar-hamburger-btn:hover {
+    color: #ffffff;
 }
