@@ -43,9 +43,10 @@ function Navbar() {
                     </li>
                 </ul>
                 <BiMenuAltRight
-                    className={[style["navbar-logo"], "flex md:hidden"].join(
-                        " "
-                    )}
+                    className={[
+                        style["navbar-hamburger-btn"],
+                        "flex md:hidden",
+                    ].join(" ")}
                 />
             </div>
         </div>
