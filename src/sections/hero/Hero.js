@@ -19,13 +19,7 @@ function Hero() {
                     {profile.name} is a {profile.jobTitle}
                 </h3>
                 <p className={style["hero-info-desc"]}>{profile.jobDesc}</p>
-                <Link
-                    href={"/#contact"}
-                    className={[
-                        style["hero-contact-btn"],
-                        "hidden md:block",
-                    ].join(" ")}
-                >
+                <Link href={"/#contact"} className={"button hidden md:block"}>
                     Contact Me
                 </Link>
             </div>
@@ -34,6 +28,13 @@ function Hero() {
                     " "
                 )}
             >
+                <Image
+                    src={"dots.png"}
+                    width={100}
+                    height={100}
+                    className={style["hero-image-eff"]}
+                    style={{ top: "10%", left: "10%" }}
+                />
                 <Image
                     src={"npp.png"}
                     width={100}
@@ -44,6 +45,13 @@ function Hero() {
                     <div className={style["hero-quote-ind"]} />
                     {profile.currentWork}
                 </span>
+                <Image
+                    src={"dots.png"}
+                    width={100}
+                    height={100}
+                    className={style["hero-image-eff"]}
+                    style={{ zIndex: 2 }}
+                />
             </div>
         </div>
     );
