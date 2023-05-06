@@ -1,3 +1,4 @@
+import About from "@/sections/about/About";
 import Hero from "@/sections/hero/Hero";
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
             <div className="section">
                 <Hero />
             </div>
-            <div className="section">about</div>
+            <div className="section">
+                <About />
+            </div>
         </>
     );
 }
