@@ -4,7 +4,7 @@ const profile = {
     nickName: 'Zilch',
     jobTitle: 'Full-Stack Developer',
     jobDesc: 'He develops complex Web and Mobile applications',
-    currentWork: 'Currently Working On Evolutionary Tech',
+    currentWork: 'I am an artist weather the canvas is a piece of paper or a block of code',
     quotes: [
         {
             author: 'Itachi Uchiha',
