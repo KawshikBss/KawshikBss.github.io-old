@@ -1,4 +1,5 @@
 import profile from "@/consts/profile";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,6 +14,18 @@ function Hero() {
                 <Link href={"/#contact"}>
                     <span className="hero-contact-btn">Contact Me</span>
                 </Link>
+            </div>
+            <div className="hero-images">
+                <Image
+                    src={"npp.png"}
+                    width={100}
+                    height={100}
+                    className="hero-image"
+                />
+                <span className="hero-quote">
+                    <span className="hero-quote-ind" />
+                    {profile.currentWork}
+                </span>
             </div>
         </div>
     );
