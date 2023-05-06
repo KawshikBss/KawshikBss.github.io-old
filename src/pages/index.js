@@ -1,4 +1,8 @@
-
 export default function Home() {
-    return <>Kawshik Bss</>;
+    return (
+        <>
+            <div className="section">home</div>
+            <div className="section">about</div>
+        </>
+    );
 }
