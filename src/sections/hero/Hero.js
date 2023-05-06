@@ -12,10 +12,8 @@ function Hero() {
                     {profile.name} is a {profile.jobTitle}
                 </h3>
                 <p className={style["hero-info-desc"]}>{profile.jobDesc}</p>
-                <Link href={"/#contact"}>
-                    <span className={style["hero-contact-btn"]}>
-                        Contact Me
-                    </span>
+                <Link href={"/#contact"} className={style["hero-contact-btn"]}>
+                    Contact Me
                 </Link>
             </div>
             <div className={style["hero-images"]}>
@@ -26,7 +24,7 @@ function Hero() {
                     className={style["hero-image"]}
                 />
                 <span className={style["hero-quote"]}>
-                    <span className={style["hero-quote-ind"]} />
+                    <div className={style["hero-quote-ind"]} />
                     {profile.currentWork}
                 </span>
             </div>
