@@ -11,6 +11,10 @@ body {
     background-color: #282c33;
 }
 
+.section {
+    @apply w-[100vw] h-[100vh] snap-center flex flex-col items-center justify-center;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
