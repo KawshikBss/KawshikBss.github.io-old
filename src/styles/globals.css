@@ -15,6 +15,54 @@ body {
     @apply w-[100vw] h-[100vh] snap-center flex flex-col items-center justify-center;
 }
 
+.section-container {
+    width: 65%;
+    margin-bottom: 48px;
+}
+
+.section-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-heading-inner {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.section-heading-inner-text {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.section-heading-inner-sym {
+    color: #c778dd;
+}
+
+.section-heading-inner-line {
+    width: 60%;
+    height: 1px;
+    background-color: #c778dd;
+}
+
+.section-heading-btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
 .button {
     padding: 8px 16px;
     border: 1px solid #c778dd;
