@@ -32,33 +32,30 @@
     margin: 32px 0 24px;
 }
 
-.hero-contact-btn {
-    padding: 8px 16px;
-    border: 1px solid #c778dd;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: left;
-    transition: 0.3s all ease-in-out;
-}
-
-.hero-contact-btn:hover {
-    background-color: #c778dd;
-    border-color: #ffffff;
-}
-
 .hero-images {
     /* width: 45%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .hero-image {
     width: 100%;
+    background: none;
+    z-index: 2;
+    object-fit: contain;
+}
+
+.hero-image-eff {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    right: 30%;
+    bottom: 10%;
+    background: none;
 }
 
 .hero-quote {
