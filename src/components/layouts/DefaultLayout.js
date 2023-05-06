@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar";
 
 function DefaultLayout({ children }) {
     return (
-        <div className="layout-container">
+        <div className="snap-mandatory h-[100vh] snap-y">
             <Navbar />
             {children}
         </div>
