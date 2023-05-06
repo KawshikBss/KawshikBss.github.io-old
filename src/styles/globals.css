@@ -15,6 +15,23 @@ body {
     @apply w-[100vw] h-[100vh] snap-center flex flex-col items-center justify-center;
 }
 
+.button {
+    padding: 8px 16px;
+    border: 1px solid #c778dd;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    transition: 0.3s all ease-in-out;
+}
+
+.button:hover {
+    background-color: #c778dd;
+    border-color: #ffffff;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
