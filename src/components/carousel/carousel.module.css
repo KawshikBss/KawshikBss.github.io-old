@@ -1,0 +1,43 @@
+.carousel-container {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    overflow: hidden;
+    @apply flex md:hidden;
+}
+
+.carousel-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    position: absolute;
+    transition: 0.3s all ease-in-out;
+}
+
+.carousel-item {
+    width: 90vw;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #282c33;
+    border: 1px solid #c778dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 90%;
+    bottom: 10%;
+    right: 20px;
+    cursor: pointer;
+}
+
+.carousel-btn-inner {
+    background: none;
+    color: #c778dd;
+}
