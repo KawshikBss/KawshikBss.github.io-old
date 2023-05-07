@@ -16,8 +16,7 @@ body {
 }
 
 .section-container {
-    width: 65%;
-    margin-bottom: 48px;
+    @apply w-[90%] md:w-[75%] mt-6 md:mt-0;
 }
 
 .section-heading {
@@ -25,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @apply mb-2 md:mb-12;
 }
 
 .section-heading-inner {
