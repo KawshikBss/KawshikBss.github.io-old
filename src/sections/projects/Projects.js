@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import style from "./projects.module.css";
 import Project from "@/components/project/Project";
+import Carousel from "@/components/carousel/Carousel";
 
 function Projects() {
     return (
@@ -23,6 +24,11 @@ function Projects() {
                 <Project />
                 <Project />
             </div>
+            <Carousel>
+                <Project />
+                <Project />
+                <Project />
+            </Carousel>
         </div>
     );
 }
