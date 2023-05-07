@@ -1,0 +1,8 @@
+.projects-inner {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    @apply hidden md:flex;
+}
