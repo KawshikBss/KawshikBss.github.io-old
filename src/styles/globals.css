@@ -49,9 +49,9 @@ body {
 }
 
 .section-heading-inner-line {
-    width: 60%;
     height: 1px;
     background-color: #c778dd;
+    @apply w-[30%] md:w-[60%];
 }
 
 .section-heading-btn {
