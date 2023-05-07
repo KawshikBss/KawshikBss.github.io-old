@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    @apply w-[90vw] md:w-[33%];
 }
 
 .project-thumbnail-container {
