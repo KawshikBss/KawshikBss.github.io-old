@@ -12,6 +12,7 @@ function Project() {
                     height={100}
                     width={100}
                     className={style["project-thumbnail"]}
+                    alt="project image"
                 />
             </Link>
             <span className={style["project-tech-list"]}>
