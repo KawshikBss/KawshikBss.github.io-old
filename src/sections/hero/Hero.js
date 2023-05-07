@@ -9,7 +9,7 @@ function Hero() {
         <div
             className={[
                 style["hero-container"],
-                "flex-col md:flex-row w-full md:w-[65%] mt-16 md:mt-0",
+                "flex-col md:flex-row w-[95%] md:w-[65%] mt-16 md:mt-0",
             ].join(" ")}
         >
             <div
@@ -29,7 +29,7 @@ function Hero() {
                 )}
             >
                 <Image
-                    src={"dots.png"}
+                    src={"Dots.png"}
                     width={100}
                     height={100}
                     className={style["hero-image-eff"]}
@@ -46,7 +46,7 @@ function Hero() {
                     {profile.currentWork}
                 </span>
                 <Image
-                    src={"dots.png"}
+                    src={"Dots.png"}
                     width={100}
                     height={100}
                     className={style["hero-image-eff"]}
