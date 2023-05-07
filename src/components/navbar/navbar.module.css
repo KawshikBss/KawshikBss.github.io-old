@@ -8,10 +8,10 @@
 }
 
 .navbar-inner {
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @apply w-[95%] md:w-[60%];
 }
 
 .navbar-logo {
