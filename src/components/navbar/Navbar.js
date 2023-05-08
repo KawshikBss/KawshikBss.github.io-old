@@ -1,11 +1,21 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import style from "./navbar.module.css";
 import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setMenuOpen((curr) => !curr);
+    };
     return (
-        <div className={style["navbar-container"]}>
+        <div
+            className={[
+                style["navbar-container"],
+                menuOpen ? style["open"] : "",
+            ].join(" ")}
+        >
             <div className={style["navbar-inner"]}>
                 <span className={style["navbar-logo"]}>
                     <Link href={"/"} className={style["bar-logo"]}>
@@ -18,25 +28,31 @@ function Navbar() {
                     )}
                 >
                     <li className={style["navbar-item-link"]}>
-                        <Link href={"/"}>
+                        <Link href={"/#hero"}>
                             <span className={style["navbar-item-sym"]}>#</span>
                             home
                         </Link>
                     </li>
                     <li className={style["navbar-item-link"]}>
-                        <Link href={"/"}>
+                        <Link href={"/#about"}>
                             <span className={style["navbar-item-sym"]}>#</span>
                             about me
                         </Link>
                     </li>
                     <li className={style["navbar-item-link"]}>
-                        <Link href={"/"}>
+                        <Link href={"/#projects"}>
                             <span className={style["navbar-item-sym"]}>#</span>
                             works
                         </Link>
                     </li>
                     <li className={style["navbar-item-link"]}>
-                        <Link href={"/"}>
+                        <Link href={"/#skills"}>
+                            <span className={style["navbar-item-sym"]}>#</span>
+                            skills
+                        </Link>
+                    </li>
+                    <li className={style["navbar-item-link"]}>
+                        <Link href={"/#contacts"}>
                             <span className={style["navbar-item-sym"]}>#</span>
                             contact me
                         </Link>
@@ -45,9 +61,81 @@ function Navbar() {
                 <BiMenuAltRight
                     className={[
                         style["navbar-hamburger-btn"],
-                        "flex md:hidden",
+                        menuOpen ? "" : style["open"],
                     ].join(" ")}
+                    onClick={toggleMenu}
                 />
+                <AiOutlineClose
+                    className={[
+                        style["navbar-hamburger-btn"],
+                        menuOpen ? style["open"] : "",
+                    ].join(" ")}
+                    onClick={toggleMenu}
+                />
+            </div>
+            <div
+                className={[
+                    style["hamburger-menu"],
+                    menuOpen ? style["open"] : "",
+                ].join(" ")}
+            >
+                <ul className={style["hamburger-item-list"]}>
+                    <li
+                        className={style["hamburger-item-link"]}
+                        onClick={toggleMenu}
+                    >
+                        <Link href={"/#hero"}>
+                            <span className={style["hamburger-item-sym"]}>
+                                #
+                            </span>
+                            home
+                        </Link>
+                    </li>
+                    <li
+                        className={style["hamburger-item-link"]}
+                        onClick={toggleMenu}
+                    >
+                        <Link href={"/#about"}>
+                            <span className={style["hamburger-item-sym"]}>
+                                #
+                            </span>
+                            about me
+                        </Link>
+                    </li>
+                    <li
+                        className={style["hamburger-item-link"]}
+                        onClick={toggleMenu}
+                    >
+                        <Link href={"/#projects"}>
+                            <span className={style["hamburger-item-sym"]}>
+                                #
+                            </span>
+                            works
+                        </Link>
+                    </li>
+                    <li
+                        className={style["hamburger-item-link"]}
+                        onClick={toggleMenu}
+                    >
+                        <Link href={"/#skills"}>
+                            <span className={style["hamburger-item-sym"]}>
+                                #
+                            </span>
+                            skills
+                        </Link>
+                    </li>
+                    <li
+                        className={style["hamburger-item-link"]}
+                        onClick={toggleMenu}
+                    >
+                        <Link href={"/#contacts"}>
+                            <span className={style["hamburger-item-sym"]}>
+                                #
+                            </span>
+                            contact me
+                        </Link>
+                    </li>
+                </ul>
             </div>
         </div>
     );
