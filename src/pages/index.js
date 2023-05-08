@@ -7,19 +7,19 @@ import Skills from "@/sections/skills/Skills";
 export default function Home() {
     return (
         <>
-            <div className="section">
+            <div id="hero" className="section">
                 <Hero />
             </div>
-            <div className="section">
+            <div id="about" className="section">
                 <About />
             </div>
-            <div className="section">
+            <div id="projects" className="section">
                 <Projects />
             </div>
-            <div className="section">
+            <div id="skills" className="section">
                 <Skills />
             </div>
-            <div className="section">
+            <div id="contacts" className="section">
                 <Contacts />
             </div>
         </>
