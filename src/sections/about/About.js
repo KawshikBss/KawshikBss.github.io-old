@@ -42,7 +42,7 @@ function About() {
                     ].join(" ")}
                 >
                     <Image
-                        src={"dots.png"}
+                        src={"Dots.png"}
                         width={100}
                         height={100}
                         className={style["about-image-eff"]}
@@ -55,7 +55,7 @@ function About() {
                         className={style["about-image"]}
                     />
                     <Image
-                        src={"dots.png"}
+                        src={"Dots.png"}
                         width={100}
                         height={100}
                         className={style["about-image-eff"]}
