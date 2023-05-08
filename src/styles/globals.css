@@ -9,6 +9,7 @@ body {
     font-family: "Fira Code", monospace;
     overflow-x: hidden;
     background-color: #282c33;
+    scroll-behavior: smooth;
 }
 
 .section {
