@@ -1,16 +1,26 @@
 .navbar-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 32px 0 8px;
     position: fixed;
+    transition: 0.3s all ease-in-out;
+}
+
+.navbar-container.open {
+    height: 100vh;
+    background-color: #282c33;
+    z-index: 100;
+    justify-content: flex-start;
 }
 
 .navbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     @apply w-[95%] md:w-[60%];
 }
 
@@ -44,10 +54,53 @@
 .navbar-hamburger-btn {
     font-size: 24px;
     color: #abb2bf;
-    transition: 0.5s all ease-in-out;
+    transition: 0.3s all ease-in-out;
     cursor: pointer;
+    scale: 0;
+    position: absolute;
+    right: 0;
+    @apply flex md:hidden;
 }
 
 .navbar-hamburger-btn:hover {
     color: #ffffff;
+}
+
+.open {
+    scale: 1;
+}
+
+.hamburger-menu {
+    width: 90%;
+    scale: 0;
+    display: none;
+    transition: 0.3s all ease-in-out;
+}
+
+.hamburger-menu.open {
+    scale: 1;
+    display: flex;
+}
+
+.hamburger-item-list {
+    padding: 47px 0 36px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.hamburger-item-link {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    transition: 0.5s all ease-in-out;
+}
+
+.hamburger-item-sym {
+    color: #c778dd;
 }
