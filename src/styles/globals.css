@@ -28,11 +28,11 @@ body {
 }
 
 .section-heading-inner {
-    width: 60%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
+    @apply w-[80%] md:w-[60%];
 }
 
 .section-heading-inner-text {
