@@ -12,7 +12,7 @@
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    @apply w-[95%] md:w-[65%];
+    @apply w-[95%] md:w-[50%];
 }
 
 .contacts-list {
@@ -23,7 +23,7 @@
     align-items: flex-start;
     padding: 16px;
     gap: 16px;
-    @apply w-[95%] md:w-[25%];
+    @apply w-[95%] md:w-[35%];
 }
 
 .contacts-list-heading {
@@ -36,10 +36,14 @@
 }
 
 .contacts-list-item {
+    width: 100%;
     color: #abb2bf;
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
