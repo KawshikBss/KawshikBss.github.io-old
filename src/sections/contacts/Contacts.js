@@ -1,5 +1,8 @@
 import React from "react";
 import style from "./contacts.module.css";
+import { MdEmail } from "react-icons/md";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import Link from "next/link";
 
 function Contacts() {
     return (
@@ -29,14 +32,23 @@ function Contacts() {
                         Message Me Here
                     </span>
                     <span className={style["contacts-list-item"]}>
+                        <MdEmail />
                         kawshikbss@gmail.com
                     </span>
-                    <span className={style["contacts-list-item"]}>
-                        kawshikbss@gmail.com
-                    </span>
-                    <span className={style["contacts-list-item"]}>
-                        kawshikbss@gmail.com
-                    </span>
+                    <Link
+                        href="https://www.linkedin.com/in/kawshikbss/"
+                        className={style["contacts-list-item"]}
+                    >
+                        <AiFillLinkedin />
+                        linkedin.com/in/kawshikbss/
+                    </Link>
+                    <Link
+                        href="https://github.com/KawshikBss"
+                        className={style["contacts-list-item"]}
+                    >
+                        <AiFillGithub />
+                        github.com/KawshikBss
+                    </Link>
                 </div>
             </div>
         </div>
