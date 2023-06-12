@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./skills.module.css";
 import Image from "next/image";
+import skills from "@/consts/skills";
 
 function Skills() {
     return (
@@ -29,36 +30,41 @@ function Skills() {
                                 Languages
                             </span>
                             <div className={style["skill-sets"]}>
-                                <span className={style["skill-set-item"]}>
-                                    excepteur
-                                </span>
-                                <span className={style["skill-set-item"]}>
-                                    excepteur
-                                </span>
-                                <span className={style["skill-set-item"]}>
-                                    excepteur
-                                </span>
-                                <span className={style["skill-set-item"]}>
-                                    excepteur
-                                </span>
+                                {skills?.languages &&
+                                    skills.languages.map((item, index) => {
+                                        return (
+                                            <span
+                                                key={index}
+                                                className={
+                                                    style["skill-set-item"]
+                                                }
+                                            >
+                                                {item}
+                                            </span>
+                                        );
+                                    })}
                             </div>
                         </div>
                     </div>
                     <div className={style["skills-list-col"]}>
                         <div className={style["skills-list-item"]}>
                             <span className={style["skill-category"]}>
-                                Languages
+                                Frameworks & Libraries
                             </span>
                             <div className={style["skill-sets"]}>
-                                <span className={style["skill-set-item"]}>
-                                    Consectetur
-                                </span>
-                                <span className={style["skill-set-item"]}>
-                                    Consectetur
-                                </span>
-                                <span className={style["skill-set-item"]}>
-                                    Consectetur
-                                </span>
+                                {skills?.frameworks &&
+                                    skills.frameworks.map((item, index) => {
+                                        return (
+                                            <span
+                                                key={index}
+                                                className={
+                                                    style["skill-set-item"]
+                                                }
+                                            >
+                                                {item}
+                                            </span>
+                                        );
+                                    })}
                             </div>
                         </div>
                         <div className={style["skills-list-item"]}>
