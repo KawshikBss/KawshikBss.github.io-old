@@ -3,7 +3,7 @@ import style from "./project.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-function Project() {
+function Project({ project }) {
     return (
         <div className={style["project-container"]}>
             <Link href={"/"} className={style["project-thumbnail-container"]}>
@@ -16,28 +16,40 @@ function Project() {
                 />
             </Link>
             <span className={style["project-tech-list"]}>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
-                <span className={style["project-tech-list-item"]}>HTML</span>
+                {project?.technologies &&
+                    project.technologies.map((item, index) => {
+                        return (
+                            <span
+                                key={index}
+                                className={style["project-tech-list-item"]}
+                            >
+                                {item}
+                            </span>
+                        );
+                    })}
             </span>
             <div className={style["project-info"]}>
                 <h3 className={style["project-info-title"]}>
-                    Alvita Nutrition
+                    {project?.title && project?.title}
                 </h3>
                 <p className={style["project-info-desc"]}>
                     Magna reprehenderit adipisicing.
                 </p>
-                <Link href={"/"} className="button">
-                    Live
+                <Link
+                    href={
+                        project?.project_link
+                            ? project?.project_link
+                            : project?.live_link
+                            ? project?.live_link
+                            : "/"
+                    }
+                    className="button"
+                >
+                    {project?.project_link
+                        ? "Project Link"
+                        : project?.live_link
+                        ? "Live"
+                        : ">"}
                 </Link>
             </div>
         </div>
