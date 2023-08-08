@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import style from "./hero.module.css";
+import { motion } from "framer-motion";
 
 function Hero() {
     return (
@@ -15,10 +16,22 @@ function Hero() {
             <div
                 className={[style["hero-info"], "w-9/10 md:w-[55%]"].join(" ")}
             >
-                <h3 className={style["hero-info-heading"]}>
+                <motion.h3
+                    initial={{ x: "-100%" }}
+                    whileInView={{ x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className={style["hero-info-heading"]}
+                >
                     {profile.name} is a {profile.jobTitle}
-                </h3>
-                <p className={style["hero-info-desc"]}>{profile.jobDesc}</p>
+                </motion.h3>
+                <motion.p
+                    initial={{ x: "-100%" }}
+                    whileInView={{ x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className={style["hero-info-desc"]}
+                >
+                    {profile.jobDesc}
+                </motion.p>
                 <Link href={"/#contact"} className={"button hidden md:block"}>
                     Contact Me
                 </Link>
@@ -28,24 +41,38 @@ function Hero() {
                     " "
                 )}
             >
-                <Image
+                <motion.img
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.8 }}
                     src={"Dots.png"}
                     width={100}
                     height={100}
                     className={style["hero-image-eff"]}
                     style={{ top: "10%", left: "10%" }}
                 />
-                <Image
+                <motion.img
+                    initial={{ x: "100%" }}
+                    whileInView={{ x: 0 }}
+                    transition={{ duration: 0.8 }}
                     src={"npp.png"}
                     width={100}
                     height={100}
                     className={style["hero-image"]}
                 />
-                <span className={style["hero-quote"]}>
+                <motion.span
+                    initial={{ x: "-100%" }}
+                    whileInView={{ x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className={style["hero-quote"]}
+                >
                     <div className={style["hero-quote-ind"]} />
                     {profile.currentWork}
-                </span>
-                <Image
+                </motion.span>
+                <motion.img
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.8 }}
                     src={"Dots.png"}
                     width={100}
                     height={100}

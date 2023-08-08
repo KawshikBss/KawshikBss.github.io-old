@@ -2,6 +2,7 @@ import React from "react";
 import style from "./skills.module.css";
 import Image from "next/image";
 import skills from "@/consts/skills";
+import { motion } from "framer-motion";
 
 function Skills() {
     return (
@@ -25,7 +26,12 @@ function Skills() {
                 />
                 <div className={style["skills-list"]}>
                     <div className={style["skills-list-col"]}>
-                        <div className={style["skills-list-item"]}>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.4 }}
+                            className={style["skills-list-item"]}
+                        >
                             <span className={style["skill-category"]}>
                                 Languages
                             </span>
@@ -44,10 +50,15 @@ function Skills() {
                                         );
                                     })}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className={style["skills-list-col"]}>
-                        <div className={style["skills-list-item"]}>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className={style["skills-list-item"]}
+                        >
                             <span className={style["skill-category"]}>
                                 Frameworks & Libraries
                             </span>
@@ -66,8 +77,13 @@ function Skills() {
                                         );
                                     })}
                             </div>
-                        </div>
-                        <div className={style["skills-list-item"]}>
+                        </motion.div>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className={style["skills-list-item"]}
+                        >
                             <span className={style["skill-category"]}>
                                 Languages
                             </span>
@@ -85,10 +101,15 @@ function Skills() {
                                     Lorem
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className={style["skills-list-col"]}>
-                        <div className={style["skills-list-item"]}>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className={style["skills-list-item"]}
+                        >
                             <span className={style["skill-category"]}>
                                 Languages
                             </span>
@@ -100,8 +121,13 @@ function Skills() {
                                     Laborum
                                 </span>
                             </div>
-                        </div>
-                        <div className={style["skills-list-item"]}>
+                        </motion.div>
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            whileInView={{ x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className={style["skills-list-item"]}
+                        >
                             <span className={style["skill-category"]}>
                                 Languages
                             </span>
@@ -116,7 +142,7 @@ function Skills() {
                                     Officia
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

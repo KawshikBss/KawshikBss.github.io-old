@@ -2,10 +2,16 @@ import React from "react";
 import style from "./project.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-function Project({ project }) {
+function Project({ project, index = 0 }) {
     return (
-        <div className={style["project-container"]}>
+        <motion.div
+            initial={{ y: "-100%" }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.2 + index * 0.4 }}
+            className={style["project-container"]}
+        >
             <Link href={"/"} className={style["project-thumbnail-container"]}>
                 <Image
                     src={"project1.png"}
@@ -33,7 +39,7 @@ function Project({ project }) {
                     {project?.title && project?.title}
                 </h3>
                 <p className={style["project-info-desc"]}>
-                    Magna reprehenderit adipisicing.
+                    {project?.short_desc && project?.short_desc}
                 </p>
                 <Link
                     href={
@@ -52,7 +58,7 @@ function Project({ project }) {
                         : ">"}
                 </Link>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

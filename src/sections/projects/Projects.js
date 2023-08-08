@@ -23,7 +23,9 @@ function Projects() {
             <div className={style["projects-inner"]}>
                 {projects &&
                     projects.slice(0, 3).map((item, index) => {
-                        return <Project key={index} project={item} />;
+                        return (
+                            <Project key={index} index={index} project={item} />
+                        );
                     })}
             </div>
             <Carousel>

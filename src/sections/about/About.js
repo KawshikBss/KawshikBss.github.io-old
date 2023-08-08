@@ -3,6 +3,7 @@ import React from "react";
 import style from "./about.module.css";
 import profile from "@/consts/profile";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function About() {
     return (
@@ -30,7 +31,14 @@ function About() {
                         " "
                     )}
                 >
-                    <p className={style["about-info-desc"]}>{profile.about}</p>
+                    <motion.p
+                        initial={{ y: "-100%" }}
+                        whileInView={{ y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className={style["about-info-desc"]}
+                    >
+                        {profile.about}
+                    </motion.p>
                     <Link href={"/"} className="button">
                         Read more
                     </Link>
@@ -41,20 +49,29 @@ function About() {
                         "w-9/10 md:w-[35%]",
                     ].join(" ")}
                 >
-                    <Image
+                    <motion.img
+                        initial={{ x: "-100%" }}
+                        whileInView={{ x: 0 }}
+                        transition={{ duration: 0.4 }}
                         src={"Dots.png"}
                         width={100}
                         height={100}
                         className={style["about-image-eff"]}
                         style={{ top: "10%", left: "-15%" }}
                     />
-                    <Image
+                    <motion.img
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: [1, 0.5, 1] }}
+                        transition={{ duration: 0.8 }}
                         src={profile.aboutImg}
                         width={100}
                         height={100}
                         className={style["about-image"]}
                     />
-                    <Image
+                    <motion.img
+                        initial={{ x: "100%" }}
+                        whileInView={{ x: 0 }}
+                        transition={{ duration: 0.4 }}
                         src={"Dots.png"}
                         width={100}
                         height={100}
