@@ -13,9 +13,9 @@
 .skills-list {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-    @apply w-[95%] md:w-1/2;
+    /* align-items: flex-start; */
+    /* gap: 16px; */
+    @apply w-[95%] md:w-1/2 flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start;
 }
 
 .skills-list-col {
@@ -24,7 +24,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 16px;
+    /* gap: 16px; */
+    @apply w-[90%] md:w-[33%] gap-0 md:gap-4;
 }
 
 .skills-list-item {
@@ -32,9 +33,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px 0px;
+    /* padding: 8px 0px; */
     gap: 8px;
     border: 1px solid #abb2bf;
+    @apply py-1 md:py-2;
 }
 
 .skill-category {

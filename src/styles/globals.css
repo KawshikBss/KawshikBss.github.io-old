@@ -37,12 +37,12 @@ body {
 }
 
 .section-heading-inner-text {
-    font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
+    @apply text-[24px] md:text-[32px];
 }
 
 .section-heading-inner-sym {
