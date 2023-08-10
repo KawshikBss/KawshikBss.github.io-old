@@ -20,7 +20,7 @@
     letter-spacing: 0em;
     text-align: left;
     color: #abb2bf;
-    @apply text-[12px] md:text-[16px] h-[40vh] md:h-fit overflow-hidden;
+    @apply text-[12px] md:text-[16px] h-[30vh] md:h-fit overflow-hidden;
 }
 
 .about-images {

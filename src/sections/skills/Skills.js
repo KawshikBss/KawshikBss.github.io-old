@@ -56,7 +56,7 @@ function Skills() {
                         <motion.div
                             initial={{ x: "100%" }}
                             whileInView={{ x: 0 }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5 }}
                             className={style["skills-list-item"]}
                         >
                             <span className={style["skill-category"]}>
@@ -81,7 +81,7 @@ function Skills() {
                         <motion.div
                             initial={{ x: "100%" }}
                             whileInView={{ x: 0 }}
-                            transition={{ duration: 0.6 }}
+                            transition={{ duration: 0.5 }}
                             className={style["skills-list-item"]}
                         >
                             <span className={style["skill-category"]}>
@@ -105,9 +105,9 @@ function Skills() {
                     </div>
                     <div className={style["skills-list-col"]}>
                         <motion.div
-                            initial={{ x: "100%" }}
+                            initial={{ x: 100 }}
                             whileInView={{ x: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.5 }}
                             className={style["skills-list-item"]}
                         >
                             <span className={style["skill-category"]}>
@@ -123,9 +123,9 @@ function Skills() {
                             </div>
                         </motion.div>
                         <motion.div
-                            initial={{ x: "100%" }}
+                            initial={{ x: 100 }}
                             whileInView={{ x: 0 }}
-                            transition={{ duration: 0.8 }}
+                            transition={{ duration: 0.5 }}
                             className={style["skills-list-item"]}
                         >
                             <span className={style["skill-category"]}>

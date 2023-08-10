@@ -31,8 +31,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 90%;
-    bottom: 10%;
+    top: 85%;
     right: 20px;
     cursor: pointer;
 }

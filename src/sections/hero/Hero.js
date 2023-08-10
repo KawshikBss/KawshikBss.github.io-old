@@ -55,7 +55,7 @@ function Hero() {
                     initial={{ x: "100%" }}
                     whileInView={{ x: 0 }}
                     transition={{ duration: 0.8 }}
-                    src={"npp.png"}
+                    src={profile.image}
                     width={100}
                     height={100}
                     className={style["hero-image"]}

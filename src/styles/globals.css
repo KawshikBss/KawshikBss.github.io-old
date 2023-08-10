@@ -56,12 +56,13 @@ body {
 }
 
 .section-heading-btn {
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 500;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
+    @apply text-[12px] md:text-[16px];
 }
 
 .button {
